@@ -7,4 +7,5 @@
     <string name="start_button_text">START GAME</string>
     <string name="load_button_text">LOAD GAME</string>
     <string name="options_button_text">OPTIONS</string>
+    <string name="loading_text">Loading...</string>
 </resources>

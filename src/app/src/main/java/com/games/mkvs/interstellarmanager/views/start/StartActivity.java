@@ -20,6 +20,7 @@ public class StartActivity extends DaggerAppCompatActivity implements StartContr
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        getWindow().setBackgroundDrawableResource(R.drawable.galaxypicture);
         setContentView(R.layout.activity_start);
 
 
