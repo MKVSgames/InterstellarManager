@@ -17,11 +17,9 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="ButtonStyle">
+    <style name="MenuButtonStyle">
         <item name="android:textColor">#FFFFFF</item>
-        <item name="android:background">#641D79</item>
-        <item name="android:alpha">0.8</item>
-
+        <item name="colorControlHighlight">#fff</item>
+        <item name="colorButtonNormal">#641D79</item>
     </style>
-
 </resources>

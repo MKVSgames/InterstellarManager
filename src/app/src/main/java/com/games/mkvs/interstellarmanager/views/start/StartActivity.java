@@ -1,8 +1,6 @@
-package com.games.mkvs.interstellarmanager.views.startview;
+package com.games.mkvs.interstellarmanager.views.start;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 
 import com.games.mkvs.interstellarmanager.R;
 

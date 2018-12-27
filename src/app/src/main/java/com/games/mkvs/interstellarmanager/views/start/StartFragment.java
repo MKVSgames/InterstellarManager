@@ -1,4 +1,4 @@
-package com.games.mkvs.interstellarmanager.views.startview;
+package com.games.mkvs.interstellarmanager.views.start;
 
 
 import android.os.Bundle;
