@@ -1,6 +1,8 @@
 package com.games.mkvs.interstellarmanager;
 
 import com.games.mkvs.interstellarmanager.diconfig.AppComponent;
+import com.games.mkvs.interstellarmanager.diconfig.DaggerAppComponent;
+
 import dagger.android.AndroidInjector;
 import dagger.android.DaggerApplication;
 

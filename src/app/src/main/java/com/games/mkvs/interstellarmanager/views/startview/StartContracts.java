@@ -11,7 +11,7 @@ public interface StartContracts {
 
         void showError(Throwable error);
 
-        void startGameWithCompany(Company company);
+        void startGameWithCompany();
 
         void showMessage(String message);
     }
@@ -25,6 +25,6 @@ public interface StartContracts {
     }
 
     interface Navigator {
-        void navigateToHomeWithCompany(Company company);
+        void navigateToHomeWithCompany();
     }
 }
