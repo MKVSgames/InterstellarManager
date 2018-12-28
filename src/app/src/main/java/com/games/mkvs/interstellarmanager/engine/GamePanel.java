@@ -9,6 +9,7 @@ import android.view.SurfaceView;
 import com.games.mkvs.interstellarmanager.constants.Constants;
 import com.games.mkvs.interstellarmanager.engine.models.game_objects.contracts.GameObject;
 import com.games.mkvs.interstellarmanager.engine.models.game_objects.contracts.Object3D;
+import com.games.mkvs.interstellarmanager.engine.services.CanvasService;
 import com.games.mkvs.interstellarmanager.engine.services.DrawingService;
 import com.games.mkvs.interstellarmanager.engine.thread.GameThread;
 
@@ -57,6 +58,7 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback, Ga
                     Object3D figure = figures.get(i);
                     moveObject(deltaX, deltaY, figure);
                 }
+                CanvasService.updateAndDraw(this);
                 x1 = x2;
                 y1 = y2;
                 break;
@@ -70,6 +72,7 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback, Ga
                     Object3D figure = figures.get(i);
                     moveObject(deltaX, deltaY, figure);
                 }
+                CanvasService.updateAndDraw(this);
                 break;
         }
         return true;
