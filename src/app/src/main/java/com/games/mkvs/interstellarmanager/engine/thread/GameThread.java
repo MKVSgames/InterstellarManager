@@ -1,23 +1,26 @@
 package com.games.mkvs.interstellarmanager.engine.thread;
 
+import android.graphics.Canvas;
 import android.view.SurfaceHolder;
 
 import com.games.mkvs.interstellarmanager.engine.GamePanel;
+import com.games.mkvs.interstellarmanager.engine.services.CanvasService;
 
 /**
  * Created by Martin on 28.12.2018 г..
  */
 
 public class GameThread extends Thread {
-    private final SurfaceHolder surfaceHolder;
+    public static final int MAX_FPS = 30;
     private final GamePanel gamePanel;
+    private boolean running;
+    private double averageFPS;
 
-    public GameThread(SurfaceHolder surfaceHolder, GamePanel panel) {
-        this.surfaceHolder = surfaceHolder;
+    public GameThread(GamePanel panel) {
         this.gamePanel = panel;
     }
 
-    /*@Override
+    @Override
     public void run() {
         long startTime;
         long timeMillis = 1000 / MAX_FPS;
@@ -28,28 +31,7 @@ public class GameThread extends Thread {
 
         while (running) {
             startTime = System.nanoTime();
-            canvas = null;
-
-            try {
-                canvas = this.surfaceHolder.lockCanvas();
-                synchronized (surfaceHolder) {
-                    this.gamePanel.update();
-                    this.gamePanel.draw(canvas);
-                }
-            }
-            catch (Exception e) {
-                e.printStackTrace();
-            }
-            finally {
-                if(canvas!=null) {
-                    try {
-                        surfaceHolder.unlockCanvasAndPost(canvas);
-                    }
-                    catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
+            CanvasService.postToCanvas(gamePanel);
 
             timeMillis = (System.nanoTime() - startTime) / 1000000;
             waitTime = targetTime - timeMillis;
@@ -71,5 +53,9 @@ public class GameThread extends Thread {
                 totalTime = 0;
             }
         }
-    }*/
+    }
+
+    public void setRunning(boolean running) {
+        this.running = running;
+    }
 }
