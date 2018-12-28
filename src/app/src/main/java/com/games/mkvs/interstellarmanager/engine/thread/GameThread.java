@@ -31,7 +31,7 @@ public class GameThread extends Thread {
 
         while (running) {
             startTime = System.nanoTime();
-            CanvasService.postToCanvas(gamePanel);
+            CanvasService.updateAndDraw(gamePanel);
 
             timeMillis = (System.nanoTime() - startTime) / 1000000;
             waitTime = targetTime - timeMillis;

@@ -10,7 +10,7 @@ import com.games.mkvs.interstellarmanager.engine.GamePanel;
  */
 
 public class CanvasService {
-    public static void postToCanvas(GamePanel gamePanel) {
+    public static void updateAndDraw(GamePanel gamePanel) {
         SurfaceHolder surfaceHolder = gamePanel.getHolder();
         Canvas canvas = null;
         try {
