@@ -34,7 +34,7 @@ public class DrawingService {
         return instance;
     }
 
-    public void drawFigures(Canvas canvas, ArrayList<Object3D> figures) {
+    public void drawFigures(Canvas canvas, List<Object3D> figures) {
         List<DrawingPart> drawingParts = arrangeDrawingParts(figures);
         drawParts(canvas, drawingParts);
     }
