@@ -6,4 +6,44 @@
     tools:context=".views.start.StartFragment"
     android:id="@+id/container">
 
+
+    <Button
+        android:id="@+id/start_game_btn"
+        android:layout_marginTop="30dp"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/app_name_tv"
+        android:text="START GAME"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:theme="@style/SuccessButton"/>
+
+    <Button
+        android:id="@+id/load_game_btn"
+        android:layout_marginTop="30dp"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/start_game_btn"
+        android:text="LOAD GAME"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:theme="@style/DefaultButton"/>
+
+    <Button
+        android:id="@+id/options_btn"
+        android:layout_marginTop="30dp"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/load_game_btn"
+        android:text="OPTIONS"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:theme="@style/InfoButton"/>
+
 </RelativeLayout>

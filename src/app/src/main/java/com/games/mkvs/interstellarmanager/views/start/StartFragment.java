@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.games.mkvs.interstellarmanager.R;
 import com.games.mkvs.interstellarmanager.base.contracts.BaseContracts;
@@ -25,6 +26,7 @@ public class StartFragment extends Fragment implements StartContracts.IStartView
     private View root;
     private StartContracts.IStartPresenter mPresenter;
     private RelativeLayout mMainContainer;
+  
 
     public StartFragment() {
         // Required empty public constructor
