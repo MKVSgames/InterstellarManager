@@ -2,18 +2,29 @@ package com.games.mkvs.interstellarmanager.views.start;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 import com.games.mkvs.interstellarmanager.R;
+import com.games.mkvs.interstellarmanager.base.contracts.BaseContracts;
+import com.games.mkvs.interstellarmanager.engine.models.game_objects.contracts.Object3D;
+import com.games.mkvs.interstellarmanager.engine.models.menu_background.StarsBackground;
+import com.games.mkvs.interstellarmanager.engine.models.menu_background.StarsBackgroundPanel;
+import com.games.mkvs.interstellarmanager.engine.services.DrawingService;
+import com.games.mkvs.interstellarmanager.engine.services.SortingService;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class StartFragment extends Fragment {
-
+public class StartFragment extends Fragment implements StartContracts.IStartView {
+    private View root;
+    private StartContracts.IStartPresenter mPresenter;
+    private RelativeLayout mMainContainer;
 
     public StartFragment() {
         // Required empty public constructor
@@ -23,8 +34,23 @@ public class StartFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_start, container, false);
+        root = inflater.inflate(R.layout.fragment_start, container, false);
+        mMainContainer = root.findViewById(R.id.container);
+        addBackground();
+        return root;
     }
 
+    @Override
+    public void setPresenter(BaseContracts.Presenter presenter) {
+        mPresenter = (StartContracts.IStartPresenter)presenter;
+    }
+
+    @Override
+    public void addBackground() {
+        ArrayList<Object3D> objects = new ArrayList<>();
+        objects.add(StarsBackground.getBackground());
+        mMainContainer.addView(new StarsBackgroundPanel(getActivity(),
+                DrawingService.getInstance(SortingService.getInstance()),
+                objects));
+    }
 }

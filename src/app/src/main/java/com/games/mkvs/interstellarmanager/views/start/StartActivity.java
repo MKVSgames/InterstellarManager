@@ -21,5 +21,17 @@ public class StartActivity extends Activity {
         Constants.SCREEN_WIDTH = dm.widthPixels;
         Constants.SCREEN_HEIGHT = dm.heightPixels;
         setContentView(R.layout.activity_start);
+
+        StartFragment startFragment = new StartFragment();
+        StartPresenter startPresenter = new StartPresenter();
+        startFragment.setPresenter(startPresenter);
+        startPresenter.subscribe(startFragment);
+
+
+        getFragmentManager()
+                .beginTransaction()
+                .replace(R.id.container, startFragment)
+                .commit();
+
     }
 }

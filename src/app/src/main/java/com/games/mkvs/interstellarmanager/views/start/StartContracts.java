@@ -9,6 +9,6 @@ public class StartContracts{
     }
 
     public interface IStartView extends BaseContracts.View{
-
+        void addBackground();
     }
 }
