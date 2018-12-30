@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class StarsBackground {
 
-    public ComplexObject getBackground() {
+    public static ComplexObject getBackground() {
         ArrayList<Object3D> starts = new ArrayList<>();
         Paint edgePaint = PaintService.createEdgePaint("");
         Paint wallPaint = PaintService.createWallPaint("white");
@@ -37,7 +37,7 @@ public class StarsBackground {
         return starSystem;
     }
 
-    private float getDimensionValue() {
+    private static float getDimensionValue() {
         return (float) Math.random() * 5000 - 2500;
     }
 }
