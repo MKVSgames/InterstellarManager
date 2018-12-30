@@ -11,15 +11,18 @@
     <style name="SuccessButton" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">#fff</item>
         <item name="colorButtonNormal">#5BB85D</item>
+        <item name="android:textColor">#FFFFFF</item>
     </style>
 
     <style name="InfoButton" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">#fff</item>
         <item name="colorButtonNormal">#5BC0DE</item>
+        <item name="android:textColor">#FFFFFF</item>
     </style>
 
     <style name="DefaultButton" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">#fff</item>
         <item name="colorButtonNormal">#7f7f7f</item>
+        <item name="android:textColor">#FFFFFF</item>
     </style>
 </resources>

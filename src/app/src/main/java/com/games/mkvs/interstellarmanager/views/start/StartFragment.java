@@ -6,6 +6,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -26,7 +27,8 @@ public class StartFragment extends Fragment implements StartContracts.IStartView
     private View root;
     private StartContracts.IStartPresenter mPresenter;
     private RelativeLayout mMainContainer;
-  
+    private LinearLayout mContentContainer;
+
 
     public StartFragment() {
         // Required empty public constructor
@@ -38,7 +40,9 @@ public class StartFragment extends Fragment implements StartContracts.IStartView
                              Bundle savedInstanceState) {
         root = inflater.inflate(R.layout.fragment_start, container, false);
         mMainContainer = root.findViewById(R.id.container);
+        mContentContainer = root.findViewById(R.id.content_container);
         addBackground();
+        mContentContainer.bringToFront();
         return root;
     }
 
@@ -51,8 +55,9 @@ public class StartFragment extends Fragment implements StartContracts.IStartView
     public void addBackground() {
         ArrayList<Object3D> objects = new ArrayList<>();
         objects.add(StarsBackground.getBackground());
-        mMainContainer.addView(new StarsBackgroundPanel(getActivity(),
+        StarsBackgroundPanel panel = new StarsBackgroundPanel(getActivity(),
                 DrawingService.getInstance(SortingService.getInstance()),
-                objects));
+                objects);
+        mMainContainer.addView(panel);
     }
 }
