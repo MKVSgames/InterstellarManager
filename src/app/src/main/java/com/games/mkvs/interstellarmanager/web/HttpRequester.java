@@ -1,6 +1,7 @@
 package com.games.mkvs.interstellarmanager.web;
 
 import com.games.mkvs.interstellarmanager.web.contracts.GetHandler;
+import com.games.mkvs.interstellarmanager.web.contracts.IHttpRequester;
 import com.games.mkvs.interstellarmanager.web.contracts.PostHandler;
 
 import java.io.IOException;
@@ -17,7 +18,7 @@ import okhttp3.Response;
  * Created by Martin on 1.1.2019 г..
  */
 
-public class HttpRequester {
+public class HttpRequester implements IHttpRequester {
     private OkHttpClient client;
     private MediaType JSON;
 
