@@ -4,11 +4,15 @@ import com.games.mkvs.interstellarmanager.base.contracts.BaseContracts;
 
 public class StartContracts{
 
-    public interface IStartPresenter extends BaseContracts.Presenter{
+    public interface IStartPresenter extends BaseContracts.Presenter {
 
     }
 
-    public interface IStartView extends BaseContracts.View{
+    public interface IStartView extends BaseContracts.View, BaseContracts.Navigator {
         void addBackground();
+
+        void addButtonListeners();
+
+        void startGameBtnClicked();
     }
 }
