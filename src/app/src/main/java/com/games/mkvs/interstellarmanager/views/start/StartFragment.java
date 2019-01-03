@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.games.mkvs.interstellarmanager.R;
 import com.games.mkvs.interstellarmanager.base.contracts.BaseContracts;
