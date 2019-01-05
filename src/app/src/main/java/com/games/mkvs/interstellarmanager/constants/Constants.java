@@ -25,4 +25,6 @@ public class Constants {
     };
 
     public static float ROTATINGCOEF = 0.3f;
+
+    public static final String BACKEND_URL="http://interstellar-manager-api.heroukuapp.com";
 }
