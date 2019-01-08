@@ -8,14 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.games.mkvs.interstellarmanager.R;
+import com.games.mkvs.interstellarmanager.base.contracts.BaseContracts;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class OverviewFragment extends Fragment {
-
-
+public class OverviewFragment extends Fragment implements OverviewContracts.IOverviewView {
     private View root;
+    private OverviewContracts.IOverviewPresenter mPresenter;
 
     public OverviewFragment() {
         // Required empty public constructor
@@ -29,4 +29,8 @@ public class OverviewFragment extends Fragment {
         return root;
     }
 
+    @Override
+    public void setPresenter(BaseContracts.Presenter presenter) {
+        this.mPresenter = (OverviewContracts.IOverviewPresenter) presenter;
+    }
 }

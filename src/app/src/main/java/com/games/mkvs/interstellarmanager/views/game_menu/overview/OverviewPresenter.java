@@ -7,16 +7,17 @@ import com.games.mkvs.interstellarmanager.base.contracts.BaseContracts;
  */
 
 public class OverviewPresenter implements OverviewContracts.IOverviewPresenter {
+    private OverviewContracts.IOverviewView mView;
     public OverviewPresenter() {
 
     }
     @Override
     public void subscribe(BaseContracts.View view) {
-
+        this.mView = (OverviewContracts.IOverviewView) view;
     }
 
     @Override
     public void unsubscribe() {
-
+        this.mView = null;
     }
 }
