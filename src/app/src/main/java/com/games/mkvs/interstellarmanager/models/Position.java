@@ -1,15 +1,15 @@
 package com.games.mkvs.interstellarmanager.models;
 
 public class Position {
-    public float positionX;
-    public float positionY;
-    public float positionZ;
+    public float x;
+    public float y;
+    public float z;
 
 
-    public Position(float positionX, float positionY, float positionZ) {
-       this.positionX=positionX;
-       this.positionY=positionY;
-       this.positionZ=positionZ;
+    public Position(float x, float y, float z) {
+       this.x=x;
+       this.y=y;
+       this.z=z;
     }
 
 
