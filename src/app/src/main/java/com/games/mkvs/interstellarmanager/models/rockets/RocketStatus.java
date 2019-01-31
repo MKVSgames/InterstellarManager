@@ -4,12 +4,12 @@ import com.games.mkvs.interstellarmanager.models.Planet;
 
 public class RocketStatus {
     public boolean isInFlight;
-    public Planet onPlanet;
-    public CrashStatus rocketCondition;
+    public Planet planet;
+    public CrashStatus rocketStatus;
 
-    public RocketStatus(boolean isInFlight, Planet onPlanet, CrashStatus rocketCondition) {
+    public RocketStatus(boolean isInFlight, Planet planet, CrashStatus rocketStatus) {
         this.isInFlight = isInFlight;
-        this.onPlanet = onPlanet;
-        this.rocketCondition = rocketCondition;
+        this.planet = planet;
+        this.rocketStatus = rocketStatus;
     }
 }
