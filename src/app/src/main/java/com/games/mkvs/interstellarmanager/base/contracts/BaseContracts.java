@@ -10,4 +10,8 @@ public abstract class BaseContracts {
         void subscribe(T view);
         void unsubscribe();
     }
+
+    public interface Navigator {
+        void navigate(Class clazz);
+    }
 }
